@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analitikos valdymas - Ataskaitos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar .profile-icon { font-size: 1.5em; cursor: pointer; }
+        .btn-logout { background-color: red; color: white; border: none; }
+        .btn-logout:hover { background-color: darkred; }
+        .section-heading { margin-top: 20px; margin-bottom: 10px; text-align: center; }
+        .button-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .button-group button { min-width: 250px; }
+        .main-heading { text-align: center; }
+        .btn-back { background-color: #28a745; color: white; margin-top: 30px; } /* Žalias mygtukas */
+        .btn-back:hover { background-color: #218838; }
+        .footer { display: flex; justify-content: center; padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <span class="navbar-brand text-white">Analitikos valdymas</span>
+        <div class="ml-auto d-flex align-items-center">
+            <a href="#" class="profile-icon mr-2">&#128100;</a>
+            <button class="btn btn-logout" type="button">Atsijungti</button>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="main-heading">Ataskaitų valdymas</h2>
+
+        <!-- Ataskaitos sudarymas Section -->
+        <div>
+            <h4 class="section-heading">Ataskaitos sudarymas</h4>
+            <div class="button-group mb-4">
+                <button type="button" class="btn btn-outline-primary" onclick="navigateTo('pardavimu_ataskaitos_sudarymas.html')">Sudaryti pardavimų ataskaitą</button>
+                <button type="button" class="btn btn-outline-primary" onclick="navigateTo('naudotoju_elgsenos_ataskaitos_sudarymas.html')">Sudaryti naudotojų elgsenos ataskaitą</button>
+                <button type="button" class="btn btn-outline-primary" onclick="navigateTo('pelno_ataskaitos_sudarymas.html')">Sudaryti įmonės pelno ataskaitą</button>
+            </div>
+        </div>
+
+        <!-- Ataskaitų peržiūra Section -->
+        <div>
+            <h4 class="section-heading">Ataskaitų peržiūra</h4>
+            <div class="button-group mb-4">
+                <button type="button" class="btn btn-outline-primary" onclick="navigateTo('pardavimu_ataskaitu_perziura.html')">Peržiūrėti pardavimų ataskaitas</button>
+                <button type="button" class="btn btn-outline-primary" onclick="navigateTo('naudotoju_elgsenos_ataskaitu_perziura.html')">Peržiūrėti naudotojų elgsenos ataskaitas</button>
+                <button type="button" class="btn btn-outline-primary" onclick="navigateTo('pelno_ataskaitu_perziura.html')">Peržiūrėti įmonės pelno ataskaitas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apacioje centroje esantis mygtukas -->
+    <div class="footer">
+        <button type="button" class="btn btn-back" onclick="navigateTo('administratoriaus_pagrindinis.html')">Atgal į pagrindinį</button>
+    </div>
+
+    <script>
+        function navigateTo(pageUrl) {
+            window.location.href = pageUrl;
+        }
+    </script>
+</body>
+</html>
