@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pardavimų ataskaitų peržiūra</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navigacijos stilius */
+        .navbar .profile-icon { font-size: 1.5em; cursor: pointer; }
+        .profile-icon {
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 1rem; /* Tarpas tarp ikonos ir mygtuko */
+        }
+        .btn-logout {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+        }
+        .btn-logout:hover {
+            background-color: darkred;
+        }
+
+        /* Skyriaus antraštės stilius */
+        .section-heading {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+        
+        /* Lentelės konteinerio stilius */
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigacijos juosta -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <span class="navbar-brand text-white">Analitikos valdymas</span>
+        <div class="ml-auto d-flex align-items-center">
+            <a href="#" class="profile-icon mr-2">&#128100;</a>
+            <button class="btn btn-logout" type="button">Atsijungti</button>
+        </div>
+    </nav>
+
+    <!-- Puslapio turinys -->
+    <div class="container mt-4">
+        <h2>Ataskaitų peržiūra</h2>
+
+        <div>
+            <h4 class="section-heading">Pardavimų ataskaitų peržiūra</h4>
+            
+            <div class="table-container">
+                <p>Čia pateikiamos visos sugeneruotos pardavimų ataskaitos.</p>
+                
+                <!-- Pardavimų ataskaitų lentelė -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Data</th>
+                            <th>Prekės Tipas</th>
+                            <th>Ataskaitos laikotarpis</th>
+                            <th>Veiksmai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2024-11-11</td>
+                            <td>Ritė</td>
+                            <td>2024-01-01 – 2024-10-31</td>
+                            <td><button class="btn btn-primary btn-sm">Peržiūrėti</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2024-11-12</td>
+                            <td>Meškerė</td>
+                            <td>2024-02-01 – 2024-10-31</td>
+                            <td><button class="btn btn-primary btn-sm">Peržiūrėti</button></td>
+                        </tr>
+                        <!-- Papildomos eilutės, jei reikia -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Grįžimo mygtukas -->
+        <button onclick="goBack()" class="btn btn-secondary mt-3">Grįžti į pagrindinį</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'analitika_main.html';
+        }
+    </script>
+</body>
+</html>
